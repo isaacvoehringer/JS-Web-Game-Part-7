@@ -1,0 +1,67 @@
+  // scss variables! 
+  $primary-color: #0e6cff;
+  $secondary-color: #ff8700;
+  $fonts: Arial, Helvetica, Serif;
+
+  // basic page styling. Some of it needs compiling!
+
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $primary-color;
+  font-family: $fonts;
+  line-height: 1.5;
+}
+
+@function text-color-picker($color) {
+    @if(lightness ($color) > 70) {
+        @return teal;
+    } @else {
+        @return white;
+    }
+}
+
+$sizes: 40px, 50px, 80px;
+
+@each $size in $sizes {
+    .icon-#{$size} {
+        font-size: $size;
+        font-family:monospace;
+        height: $size;
+        width: $size;
+        color: $secondary-color;
+    }
+}
+
+@mixin flex ($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+ .element {
+    @include flex(row, center, center)
+ }
+
+ @mixin button() {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    @content;
+        }
+
+        .alert {
+            @include button {
+                color: #F00;
+            }
+        }
+        .cancel {
+            @include button {
+                border: solid 3px #999;
+            }
+        }

@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0e6cff;
+  font-family: Arial, Helvetica, Serif;
+  line-height: 1.5;
+}
+
+.icon-40px {
+  font-size: 40px;
+  font-family: monospace;
+  height: 40px;
+  width: 40px;
+  color: #ff8700;
+}
+
+.icon-50px {
+  font-size: 50px;
+  font-family: monospace;
+  height: 50px;
+  width: 50px;
+  color: #ff8700;
+}
+
+.icon-80px {
+  font-size: 80px;
+  font-family: monospace;
+  height: 80px;
+  width: 80px;
+  color: #ff8700;
+}
+
+.element {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert {
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  color: #F00;
+}
+
+.cancel {
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  border: solid 3px #999;
+}
+
+/*# sourceMappingURL=style.css.map */
